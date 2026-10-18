@@ -1,0 +1,260 @@
+/* warna yang saya pakai: biru tua, hijau tosca, dan koral */
+:root {
+  --biru: #1b2a49;
+  --tosca: #2a9d8f;
+  --koral: #ef6f5e;
+  --latar: #f4f6fa;
+  --abu: #6b7385;
+}
+
+/* semua halaman: latar polos abu muda */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--latar);
+  color: #273049;
+}
+
+/* khusus Beranda (halaman yang punya .banner): latar foto gunung */
+body:has(.banner) {
+  background: url("foto.png") center / cover no-repeat fixed, var(--biru);
+}
+
+/* ---------- navbar ---------- */
+.navbar {
+  background-color: white;
+  box-shadow: 0 1px 8px rgba(27, 42, 73, 0.08);
+}
+
+.navbar-brand {
+  font-weight: 600;
+  color: var(--biru) !important;
+}
+
+.navbar-brand span {
+  color: var(--koral);
+}
+
+.navbar .nav-link {
+  color: var(--abu) !important;
+}
+
+.navbar .nav-link.active {
+  color: var(--biru) !important;
+  font-weight: 500;
+}
+
+/* ---------- banner dan foto profil (Beranda) ---------- */
+.banner {
+  height: 200px;
+}
+
+.profil-atas {
+  margin-top: -85px;
+}
+
+.avatar {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 6px solid white;
+  object-fit: cover;
+  box-shadow: 0 4px 14px rgba(27, 42, 73, 0.2);
+}
+
+.sapaan {
+  color: #cfe0ff;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+.profil-atas h1 {
+  color: white;
+  text-shadow: 0 2px 8px rgba(27, 42, 73, 0.5);
+}
+
+.profil-atas .text-muted {
+  color: #eef2fc !important;
+}
+
+.profil-atas .btn-garis {
+  border-color: white;
+  color: white;
+}
+
+.profil-atas .btn-garis:hover {
+  background-color: white;
+  color: var(--biru);
+}
+
+/* ---------- judul halaman lain: warna biru polos seperti semula ---------- */
+.judul-halaman {
+  background-color: var(--biru);
+  color: white;
+  padding: 50px 0;
+  margin-bottom: 40px;
+}
+
+.judul-halaman p {
+  color: #c5cbe0;
+  margin-bottom: 0;
+}
+
+/* ---------- kartu ---------- */
+.kartu {
+  background-color: white;
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 2px 14px rgba(27, 42, 73, 0.07);
+  padding: 24px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.kartu-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(27, 42, 73, 0.12);
+}
+
+.kartu h5 {
+  color: var(--biru);
+  font-weight: 600;
+}
+
+/* ---------- tombol ---------- */
+.btn-koral {
+  background-color: var(--koral);
+  border: none;
+  color: white;
+  border-radius: 8px;
+}
+
+.btn-koral:hover {
+  background-color: #dc5946;
+  color: white;
+}
+
+.btn-biru {
+  background-color: var(--biru);
+  border: none;
+  color: white;
+  border-radius: 8px;
+}
+
+.btn-biru:hover {
+  background-color: #2d4170;
+  color: white;
+}
+
+.btn-garis {
+  border: 1px solid var(--biru);
+  color: var(--biru);
+  border-radius: 8px;
+}
+
+.btn-garis:hover {
+  background-color: var(--biru);
+  color: white;
+}
+
+/* ---------- label mata kuliah ---------- */
+.label-matkul {
+  display: inline-block;
+  background-color: #dff5f1;
+  color: #1d7a6f;
+  font-size: 0.78rem;
+  font-weight: 500;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+/* ---------- bar progres ---------- */
+.progress {
+  height: 8px;
+  border-radius: 10px;
+  background-color: #e8ebf2;
+}
+
+.progress-bar {
+  background-color: var(--tosca);
+  border-radius: 10px;
+}
+
+.baris-progres {
+  margin-bottom: 18px;
+}
+
+.baris-progres .teks {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+}
+
+/* ---------- baris data diri ---------- */
+.baris-data {
+  display: flex;
+  padding: 12px 0;
+  border-bottom: 1px solid #eef0f5;
+}
+
+.baris-data:last-child {
+  border-bottom: none;
+}
+
+.baris-data .nama {
+  width: 140px;
+  font-weight: 500;
+  color: var(--biru);
+}
+
+.baris-data .isi {
+  color: var(--abu);
+}
+
+/* ---------- detail catatan ---------- */
+.kotak-contoh {
+  background-color: #fff6f4;
+  border-left: 5px solid var(--koral);
+  padding: 18px;
+  border-radius: 8px;
+}
+
+.daftar-poin {
+  padding-left: 0;
+  list-style: none;
+}
+
+.daftar-poin li {
+  padding: 10px 14px;
+  margin-bottom: 8px;
+  background-color: var(--latar);
+  border-radius: 8px;
+  border-left: 4px solid var(--tosca);
+}
+
+/* ---------- kolom cari ---------- */
+.kolom-cari {
+  border-radius: 10px;
+  border: 1px solid #d9deea;
+  padding: 10px 16px;
+}
+
+.kolom-cari:focus {
+  border-color: var(--tosca);
+  box-shadow: none;
+}
+
+/* ---------- form login ---------- */
+.form-control {
+  border-radius: 8px;
+  padding: 10px 14px;
+}
+
+.form-control:focus {
+  border-color: var(--tosca);
+  box-shadow: none;
+}
+
+footer {
+  background-color: var(--biru);
+  color: #c5cbe0;
+}
